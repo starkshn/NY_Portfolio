@@ -5,7 +5,7 @@
     --color-white: #ffffff;
     --color-light-white: #eeeeee;
     --color-dark-white: #bdbdbd;
-    --color-python-yellow: #e2e629;
+    --color-python-yellow: #fffd75;
     --color-python-blue: #3165f5;
     --color-pink: #fe918d;
     --color-dark-pink:#ff6863;
@@ -14,9 +14,11 @@
     --color-grey: #616161;
     --color-light-grey: #7c7977;
     --color-blue:#73aace;
+    --color-light-blue: #5291f7;
     --color-yellow: #fff7d1;
     --color-orange: #feb546;
     --color-black: #000000;
+    
 
 
     /* Font size */
@@ -32,7 +34,7 @@
     --weight-regular: 400;
 
     /* Size */
-
+    --size-border-radius: 4px;
 
 }
 
@@ -43,6 +45,29 @@
     
 }
 
+body {
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    cursor: default;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+    
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none; 
+    outline: none;
+}
 /* Typograpgy */
 h1 {
     font-size: var(--font-large);
@@ -72,3 +97,82 @@ p {
     margin: 4px 0px;
 }
 
+/* navbar */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: var(--color-python-blue); */
+    align-items: center;
+    padding: 16px;
+    background: url("images/navbar_bacground.png") center/cover no-repeat;
+
+}
+
+.navbar__logo {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+    color: var(--color-white);
+}
+.navbar__logo a{
+    color: var(--color-white);
+}
+
+.navbar__menu {
+    display: flex;
+}
+
+.navbar__menu__item {
+    padding: 8px 12px;
+    margin: 0 4px;
+    display: flex;
+    align-items: center;
+    transition: 300ms linear;
+    cursor: pointer;
+    color: var(--color-white);
+    
+    border: 1px solid var(--color-white);
+    border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item.active {
+    border: 1px solid var(--color-white);
+    border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item:hover {
+    background-color: var(--color-light-blue);
+    border-radius: var(--size-border-radius);
+    transform: scale(1.2);
+    transition: 300ms linear;
+}
+
+/* Home */
+#Home {
+    background: url('images/my_background_2.png') center/cover no-repeat; 
+    padding: 40px;
+    align-items: center;
+    text-align: center;
+
+}
+
+.home__avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid var(--color-light-white);
+}
+
+.home__title, 
+.home__description {
+    color: var(--color-white);
+}
+
+.home__contact {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    margin: 24px;
+    padding: 8px 12px;
+    border: 2px solid var(--color-white);
+    border-radius: var(--size-border-radius);
+    color: var(--color-white);
+}
