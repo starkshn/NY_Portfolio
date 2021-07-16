@@ -116,14 +116,21 @@ p {
 
 /* navbar */
 #navbar {
+    position: fixed;
     display: flex;
+    width: 100%;
     justify-content: space-between;
-    /* background-color: var(--color-python-blue); */
+    background-color: var(--color-python-blue);
     align-items: center;
     padding: 16px;
-    background-color: var(--color-python-blue);
-    /* background: url("images/navbar_bacground.png") center/cover no-repeat; */
+    /* background-color: transparent; */
+    z-index: 1;
 
+}
+
+.navbar__transparent {
+    transition: all 300ms ease-in;
+    opacity: 0.7;
 }
 
 .navbar__logo {
@@ -181,6 +188,8 @@ p {
     padding: 40px;
     align-items: center;
     text-align: center;
+    position: sticky;
+    padding-top: 180px;
 
 }
 
@@ -198,6 +207,24 @@ p {
 .home__description {
     color: var(--color-white);
 }
+
+.fas.fa-mitten{
+    animation: hand__image 3s; 
+
+    animation-iteration-count: infinite;
+
+    transform-origin: 0% 50% 100%;
+}
+
+@keyframes hand__image {
+
+    0% { transform: rotate(-20deg); } 
+
+    50% { transform: rotate(40deg); }
+    
+    100% { transform: rotate(-20deg); }
+    
+    }
 
 .home__contact {
     font-size: var(--font-regular);
@@ -700,5 +727,5 @@ p {
         height: 80px;
     }
 
-    
+
 }
