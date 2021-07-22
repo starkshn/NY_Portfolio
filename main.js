@@ -176,3 +176,39 @@ document.addEventListener('scroll', () => {
 //     }
     
 // });
+
+
+// make prohect event
+const workBtnContainer = document.querySelector('.work__catagories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+
+workBtnContainer.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+
+    if (filter == null) {
+        return;
+    } else {
+
+        projects.forEach((project => {
+            setTimeout(() => {
+
+                if(filter === '*' || filter === project.dataset.type) {
+                    project.classList.remove('invisible');
+                    
+                }else {
+    
+                        project.classList.add('invisible');
+                    
+                }
+                    
+                }, 100);
+                
+                
+        }));
+
+    }
+    if (filter == '*') {
+        project.classList.add('project_visible');
+    }
+});

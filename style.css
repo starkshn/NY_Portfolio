@@ -508,9 +508,45 @@ p {
     margin: 2px;
     background-color: var(--color-dark-white);
     /* border: 1px solid var(--color-light-grey); */
-    
+
+    animation: fade-in 1s;
+    /* animation-fill-mode: forwards; */
+    display: block;
     
 }
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+        transform: scale(0.9);
+        transition: ease-out;
+        
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        transform: scale(1);
+        transition: ease-out;
+    }
+}
+
+.project.invisible {
+    display: none;
+    /* animation: fade-out 2s;
+    animation-fill-mode: forwards; */
+    
+}
+
+/* @keyframes fade-out {
+    from {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+} */
 
 .project__img {
     width: 250px;
@@ -699,13 +735,8 @@ p {
     
 }
 
-.visible {
-    opacity: 1;
-    transition: all 300ms ease-in;
-    pointer-events:visible;
-}
 .fas.fa-arrow-circle-up{
-
+    
     font-size: 70px;
     color: var(--color-python-blue);
     background-color: var(--color-white);
@@ -714,7 +745,19 @@ p {
     
 }
 
+.visible {
+    opacity: 1;
+    transition: all 300ms ease-in;
+    pointer-events:visible;
+}
 
+.project_visible { 
+    display: block;
+}
+
+.project_unvisible{
+    display: none;
+}
 
 /* make scroll bar */
 .beScrollbar{
@@ -742,6 +785,10 @@ p {
     left: 50px;
     bottom: 50px;
 } */
+
+
+/* make project events */
+
 
 /* for below 768px screen width */
 @media screen and (max-width: 768px) {
