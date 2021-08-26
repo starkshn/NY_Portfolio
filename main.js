@@ -212,3 +212,4 @@ workBtnContainer.addEventListener('click', (e) => {
         project.classList.add('project_visible');
     }
 });
+// remove selection from span
